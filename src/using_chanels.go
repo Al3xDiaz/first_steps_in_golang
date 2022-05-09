@@ -10,7 +10,7 @@ func main(){
 	create chanel
 	params:
 		1: type chanel
-		2: concurrent tasks numbers
+		2: concurrent tasks numbers (optional)
 	*/
 	c:= make(chan string, 1)
 	fmt.Println("start process...")
