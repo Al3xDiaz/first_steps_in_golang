@@ -11,15 +11,15 @@ func main(){
 	sala1 := make(chan string)
 	sala2 := make(chan string)
 
-	go message("sala 1: bienvenidos...",sala1)
+	go message("sala 1: bienvenidos ...",sala1)
 	go message("sala 2: bienvenidas ...",sala2)
 
 	for i:=0; i < 2;i++{
 		select{
-		case m1 := <- sala1:
-			fmt.Println(m1)
-		case m2 := <- sala2:
-			fmt.Println(m2)
+			case m1 := <- sala1:
+				fmt.Println(m1)
+			case m2 := <- sala2:
+				fmt.Println(m2)
 		}
 	}
 	
