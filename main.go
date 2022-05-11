@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/al3xdiaz/first_steps_in_golang/src"
 )
@@ -11,6 +12,11 @@ func message(text string, c chan string) {
 }
 
 func main() {
+
+	fmt.Println("start...")
+
+	argsWithoutProg := os.Args[1:]
+	fmt.Println(argsWithoutProg)
 
 	sala1 := make(chan string)
 	sala2 := make(chan string)
@@ -27,5 +33,5 @@ func main() {
 		}
 	}
 	src.GoRutime()
-
+	fmt.Println("stop service")
 }

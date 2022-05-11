@@ -6,7 +6,7 @@ RUN go build main.go
 FROM scratch as runner
 WORKDIR /
 COPY --from=build /usr/lib/app/main .
-CMD [ "/main" ]
+ENTRYPOINT [ "/main" ]
 
 
 
