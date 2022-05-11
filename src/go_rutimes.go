@@ -36,9 +36,10 @@ func GoRutime() {
 	fmt.Println("start...")
 	wg.Add(1)
 
-	// se agrega la go rutime y la direccion en memoria de hilo del proceso principal
+	// se agrega la go rutime y la direccion en memoria de hilo del proceso wg
 	go say("ahhhh nu ma ci es cierto", &wg)
 	fmt.Println("stop service")
 
+	// se espera a que el proceso wg termine
 	wg.Wait()
 }

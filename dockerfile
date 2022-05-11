@@ -1,7 +1,7 @@
-FROM golang:1-alpine3.10 as build
+FROM golang:1.18-alpine3.14 as build
 WORKDIR /usr/lib/app
 COPY . .
-RUN go build src/main.go
+RUN go build main.go
 
 FROM scratch as runner
 WORKDIR /

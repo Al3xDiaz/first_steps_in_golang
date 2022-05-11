@@ -1,0 +1,5 @@
+# Golang Example
+## run code
+`docker
+docker build -t golang_example . && docker run --rm golang_example
+` 
